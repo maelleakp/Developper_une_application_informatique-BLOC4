@@ -1,0 +1,43 @@
+body {
+    background-color: blanchedalmond;
+
+}
+
+header {
+
+    margin-left: 40%;
+    
+}
+
+a h1 {
+    margin-left: 8%;
+}
+
+h2 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+}
+
+.pass {
+    margin-top: 0%;
+}
+div label {
+    text-align: center;
+}
+
+input {
+    margin-left: 40%;
+    margin-right: 40%;
+    border-bottom: 0cm ;
+}
+
+.co {
+    margin-left: 47%;
+}
