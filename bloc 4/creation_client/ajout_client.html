@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <form action="../login/login.html">
+        <button type="submit">Deconnexion</button>
+    </form>
+    </header>
+    
+    <div id="wrap">
+        <header class="header">
+          <nav class="nav">
+            <a href="#wrap" id="open">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34px" height="27px" viewBox="0 0 34 27" enable-background="new 0 0 34 27" xml:space="preserve">
+      <rect fill="#FFFFFF" width="34" height="4"/>
+      <rect y="11" fill="#FFFFFF" width="34" height="4"/>
+      <rect y="23" fill="#FFFFFF" width="34" height="4"/>
+      </svg>
+            </a>
+            <a href="#" id="close">x</a>
+
+            <img class="img" src="/img/logo.png">
+            
+            <form action="../accueil/vin.html">
+                <button type="submit"><h1>Accueil</button>
+            </form>
+            <form action="../produit/article.html">
+                <button type="submit"><h1>Article</button>
+            </form>
+        
+            <form action="../creation_client/client.html">
+                <button type="submit"><h1>Article</button>
+            </form>
+        
+            <form action="../employe/employe.html">
+                <button type="submit"><h1>Employé</button>
+            </form>
+
+            <nav>
+                <ul>
+                    <li class="deroulant"><a><button type="submit"><h1>Fournisseur</button></a>
+                        <ul class="sous">
+                            <li><a href="../fournisseur/fournisseur.html">Liste</a></li>
+                            <li><a href="../fournisseur/commande_fournisseur.html">Commande</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <form action="../inventaire/inventaire.html">
+                <button type="submit"><h1>Inventaire</button>
+            </form>
+            
+          </nav>
+        </header>
+    </div>
+
+    <form action="../creation_client/client.html">
+        <button type="submit">Retour</i></button>
+      </form>
+
+      <h2>Ajout de client</h2>
+      <form action="#">
+          <p><i>Saisisez les informations du client : <br></i><em>*</em> sont <em>obligatoires</em></p>
+    <fieldset>
+
+        <label for="nom">Nom <em>*</em></label>
+            <input id="" placeholder="St Emillion" autofocus="" required=""><br>
+
+        <label for="prenom">Prénom <em>*</em></label>
+            <input id="" placeholder="AOC" autofocus="" required=""><br>
+
+        <label for="date">Date de naissance</label><br>
+            <input type="date" id="start" name="trip-start"
+                value="2018-07-22"
+                min="2018-01-01" max="2018-12-31"><br>
+        
+        <label for="telephone">Téléphone</label>
+            <input id="telephone" type="tel" placeholder="06xxxxxxxx" pattern="06[0-9]{8}"><br>
+
+        <label for="email">Email <em>*</em></label>
+            <input id="email" type="email" placeholder="prenom.nom@polytechnique.edu" required="" pattern="[a-zA-Z]*.[a-zA-Z]*@polytechnique.edu"><br>
+        
+    </fieldset>
+    <button type="submit" >Valider</button>
+</body>
+</html>

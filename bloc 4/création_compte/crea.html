@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crea.css" type="text/css">
+    <title>Page création de compte</title>
+
+</head>
+<body>
+    <header>
+
+        <a href="vin.html"><h1>NEGOSUD</h1></a>
+        <h2>Création de compte</h2>
+
+    </header>
+
+    <div>
+
+    <label for="Email">Email :</label><br>
+        <input type="text" id="Email" name="Email" placeholder="Saisisez votre email"><br>
+
+    </div>
+    
+    <div>
+        <form method="POST" onSubmit="return validate()">
+
+            <label for="pass">Mot de passe :</label><br>
+                <input type="password" id="mdp" name="password" placeholder="Votre mot de passe" minlength="8" required><br>
+
+            <label for="repass">Confirmez le mot de passe :</label><br>
+                <input type="password" id="confirm_mdp" name="password" placeholder="Confirmation du mot de passe" minlength="8" required><br>
+                <input class="valider" type="submit" value="Valider"><br>
+
+        </form>
+    </div>
+
+    <script src="crea.js"></script>
+</body>
+</html>
