@@ -5,7 +5,7 @@ $customers = file_get_contents('../database/response_1675256819699.json');
 if ($customers){
   $customers = json_decode($customers, JSON_OBJECT_AS_ARRAY);
 
-  foreach ($customers as $customer){
+  foreach ($customers as &$customer){
     if ($customer['id'] == $_GET['id']){
 
       if (isset($_POST['name'])) {
@@ -20,6 +20,7 @@ if ($customers){
         $customer['street'] = htmlentities($_POST['street']);
 
         $customers = json_encode($customers);
+
         file_put_contents('../database/response_1675256819699.json', $customers);
 
         header('Location: ./liste.php?msg=add_ok');

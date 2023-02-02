@@ -4,9 +4,7 @@ $customers = file_get_contents('../database/response_1675256819699.json');
 $array = json_decode($customers, true);
 
 session_start();
-?>
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>

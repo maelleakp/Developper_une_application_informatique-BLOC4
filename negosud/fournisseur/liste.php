@@ -1,26 +1,9 @@
 <?php
-  $json = file_get_contents('../database/response_1675256819699.json');
-  $array = json_decode($json, true);
-  
-  session_start();
-  
-  // modification code
-  if (isset($_POST['modify'])) {
-    // modification logic here
-    $_SESSION['notification'] = 'Modification effectuée';
-  }
-  
-  // suppression code
-  if (isset($_POST['delete'])) {
-    // suppression logic here
-    $_SESSION['notification'] = 'Suppression effectuée';
-  }
-  
-  // affichage de la notification
-  if (isset($_SESSION['notification'])) {
-    echo $_SESSION['notification'];
-    unset($_SESSION['notification']);
-  }
+
+$providers = file_get_contents('../database/response_1675327340429.json');
+$array = json_decode($providers, true);
+
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -38,35 +21,64 @@
 
 <body>
 <div class="container">
-  <h2>Customer</h2>
-  <table class="table">
-    <thead class="thead-dark">
-    <tr>
-      <th>Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Password</th>
-      <th>Role Id</th>
-      <th>Id</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($array as $item): ?>
-    <tr>
-      <td><?php echo $item['name']; ?></td>
-      <td><?php echo $item['lastName']; ?></td>
-      <td><?php echo $item['email']; ?></td>
-      <td><?php echo $item['password']; ?></td>
-      <td><?php echo $item['roleId']; ?></td>
-      <td><?php echo $item['id']; ?></td>
-      <td><button class="modify">Modifier</button></td>
-      <td><button class="delete">Supprimer</button></td>
-    </tr>
-  <?php endforeach; ?>       
-    </thead>
-  </table>
+  
+  <h2>Fournisseur</h2>
+    <a href="add.php">Ajouter</a>
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th>DomainName</th>
+        <th>Name</th>
+        <th>LastName</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Siret</th>
+        <th>WebSite</th>
+        <th>PostalCode</th>
+        <th>City</th>
+        <th>Street</th>
+        <th>Id</th>
+      </tr>
+      </thead>
+      <tbody>
+      <?php foreach ($array as $item): ?>
+      <tr>
+        <td><?php echo $item['domainName']; ?></td>
+        <td><?php echo $item['name']; ?></td>
+        <td><?php echo $item['lastName']; ?></td>
+        <td><?php echo $item['phone']; ?></td>
+        <td><?php echo $item['email']; ?></td>
+        <td><?php echo $item['siret']; ?></td>
+        <td><?php echo $item['webSite']; ?></td>
+        <td><?php echo $item['postalCode']; ?></td>
+        <td><?php echo $item['city']; ?></td>
+        <td><?php echo $item['street']; ?></td>
+        <td><?php echo $item['id']; ?></td>
+        <td><a href="modif.php?id=<?= $item['id'] ?>">Modifier</a></td>
+        <td><a href="delete.php?id=<?= $item['id'] ?>">Supprimer</a></td>
+      </tr>
+      <?php endforeach; ?>       
+      </thead>
+    </table>
 </div>
 
+<?php
+if (isset($_GET['msg'])){
+    switch ($_GET['msg']){
+        case 'del.ok' : 
+            echo 'Suppression ok';
+            break;
+            
+        case 'upd.ok' : 
+            echo 'Modification ok';
+            break;
+        
+        case 'add.ok' : 
+            echo 'Ajout ok';
+            break;
+    }
+}
+?>
 </body>
 </html>
 
