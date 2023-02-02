@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #4d0000;
+}
+
+body > .container-fluid, body#connect .container-fluid > .row{
+    height: 100%;
+}
+
+.img-background{
+    background: url("https://fakeimg.pl/1200x900/ff0000/");
+}
+
+.btn-brown, .btn-brown:hover, .btn-brown:focus, .btn-brown:active{
+    background-color: #4d0000;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+header{
+    background-color: #4d0000;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 28px !important;
+    color: #fff;
+}
+
+nav{
+    background-color: #4d0000;
+    height: 100%;
+    min-width: 230px !important;
+    position: absolute;
+    left:-180px;
+    transition-property: left;
+    transition-duration: .5s;
+}
+
+nav.is-active{
+    left:0;
+}
+
+nav .nav-item{
+    padding: 10px 0;
+}
+
+nav .nav-item a.nav-link{
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+h1{
+    margin: 30px 0;
+}
+
+table.table-bordered{
+    border: 3px solid #000;
+}
+
+.btn{
+    margin: 5px;
+    text-transform: uppercase;
+    font-size: .7em;
+}
