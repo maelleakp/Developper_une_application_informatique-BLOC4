@@ -12,7 +12,7 @@
 <div class="container-fluid">
     <div class="row">
         <header class="col">
-            logo
+            <img src="asset/img/logo-noire.png" style="height:60px">
         </header>
     </div>
     <nav id="navbar" >

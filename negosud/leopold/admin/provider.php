@@ -39,9 +39,7 @@ $items = getItems("provider");
                 </tr>';
                 }
                 
-                
-                
-                
+            
                 
                 ?>
                 
